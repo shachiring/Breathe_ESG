@@ -1,0 +1,16 @@
+Belegnummer;Werk;Materialkurztext;Menge;MEINS;Buchungsdatum;Warengruppe;Bewegungsart;CO2_Faktor
+4500012301;1010;Diesel Kraftstoff;2500;L;15.01.2025;Diesel;101;2.68
+4500012302;1010;Diesel Kraftstoff;1800;L;12.02.2025;Diesel;101;2.68
+4500012303;1020;Erdgas (LNG);4200;M3;20.01.2025;Natural_Gas;101;2.02
+4500012304;1020;Heizoel leicht;3100;L;28.02.2025;Heating_Oil;101;2.54
+4500012305;1010;Bleistifte Bürobedarf;500;ST;03.03.2025;Office_Supplies;101;0.05
+4500012306;1030;Schmiermittel Industrie;120;KG;18.01.2025;Lubricants;101;0.89
+4500012307;1010;Benzin Super E10;1950;L;22.03.2025;Petrol;101;2.31
+4500012308;1020;Druckerpapier A4;250;ST;01.02.2025;Office_Supplies;101;0.03
+4500012309;1030;Flüssiggas (LPG);800;L;14.03.2025;LPG;101;1.56
+4500012310;1010;Reinigungsmittel;45;L;25.01.2025;Cleaning;101;0.12
+4500012311;1020;Diesel Kraftstoff;3200;L;05.04.2025;Diesel;101;2.68
+4500012312;1030;Erdgas (LNG);5100;M3;11.04.2025;Natural_Gas;101;2.02
+4500012313;1010;Laptop ThinkPad;15;ST;19.02.2025;IT_Hardware;101;45.00
+4500012314;1020;Benzin Super E10;2100;L;28.04.2025;Petrol;101;2.31
+4500012315;1010;Kühlflüssigkeit;60;L;02.05.2025;Coolant;101;

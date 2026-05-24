@@ -1,0 +1,128 @@
+{
+  "bookings": [
+    {
+      "booking_id": "NVN-2025-00101",
+      "traveler_name": "Priya Sharma",
+      "category": "FLIGHT",
+      "departure_code": "BOM",
+      "arrival_code": "DEL",
+      "distance_km": null,
+      "cabin_class": "Economy",
+      "cost": 8500,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-01-15"
+    },
+    {
+      "booking_id": "NVN-2025-00102",
+      "traveler_name": "Priya Sharma",
+      "category": "HOTEL",
+      "hotel_name": "Taj Palace, New Delhi",
+      "hotel_nights": 2,
+      "cost": 22000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-01-15"
+    },
+    {
+      "booking_id": "NVN-2025-00103",
+      "traveler_name": "Raj Mehta",
+      "category": "FLIGHT",
+      "departure_code": "LHR",
+      "arrival_code": "JFK",
+      "distance_km": 5555,
+      "cabin_class": "Business",
+      "cost": 245000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-02-03"
+    },
+    {
+      "booking_id": "NVN-2025-00104",
+      "traveler_name": "Raj Mehta",
+      "category": "HOTEL",
+      "hotel_name": "The Standard, NYC",
+      "hotel_nights": 5,
+      "cost": 180000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-02-03"
+    },
+    {
+      "booking_id": "NVN-2025-00105",
+      "traveler_name": "Raj Mehta",
+      "category": "GROUND",
+      "departure_code": "JFK",
+      "arrival_code": "Manhattan",
+      "distance_km": 28,
+      "cabin_class": null,
+      "cost": 4500,
+      "currency": "INR",
+      "co2_kg": 4.79,
+      "booking_date": "2025-02-03"
+    },
+    {
+      "booking_id": "NVN-2025-00106",
+      "traveler_name": "Anita Desai",
+      "category": "FLIGHT",
+      "departure_code": "BLR",
+      "arrival_code": "SIN",
+      "distance_km": 3918,
+      "cabin_class": "Economy",
+      "cost": 32000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-03-10"
+    },
+    {
+      "booking_id": "NVN-2025-00107",
+      "traveler_name": "Anita Desai",
+      "category": "HOTEL",
+      "hotel_name": "Marina Bay Sands",
+      "hotel_nights": 3,
+      "cost": 95000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-03-10"
+    },
+    {
+      "booking_id": "NVN-2025-00108",
+      "traveler_name": "Vikram Joshi",
+      "category": "RAIL",
+      "departure_code": "DEL",
+      "arrival_code": "AGR",
+      "distance_km": 200,
+      "cabin_class": "First",
+      "cost": 1500,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-01-28"
+    },
+    {
+      "booking_id": "NVN-2025-00109",
+      "traveler_name": "Vikram Joshi",
+      "category": "FLIGHT",
+      "departure_code": "DEL",
+      "arrival_code": "DXB",
+      "distance_km": null,
+      "cabin_class": "Economy",
+      "cost": 18000,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-04-05"
+    },
+    {
+      "booking_id": "NVN-2025-00110",
+      "traveler_name": "Meera Nair",
+      "category": "GROUND",
+      "departure_code": "BOM",
+      "arrival_code": "Pune",
+      "distance_km": 148,
+      "cabin_class": null,
+      "cost": 3200,
+      "currency": "INR",
+      "co2_kg": null,
+      "booking_date": "2025-02-20"
+    }
+  ]
+}

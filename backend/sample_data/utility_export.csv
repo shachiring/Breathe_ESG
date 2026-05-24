@@ -1,0 +1,13 @@
+Account Number,Meter ID,Service Address,Read Date Start,Read Date End,Usage (kWh),Demand (kW),Cost ($),Tariff,Notes
+ACC-90210,MTR-001,"123 Industrial Blvd, Houston TX 77001",2025-01-01,2025-01-31,42350,185,5482.50,Commercial-TOU,
+ACC-90210,MTR-001,"123 Industrial Blvd, Houston TX 77001",2025-02-01,2025-02-28,38900,172,5035.10,Commercial-TOU,
+ACC-90210,MTR-001,"123 Industrial Blvd, Houston TX 77001",2025-03-01,2025-03-31,41200,178,5333.40,Commercial-TOU,
+ACC-90210,MTR-002,"456 Warehouse Rd, Houston TX 77002",2025-01-01,2025-01-31,18750,92,2428.75,Commercial-Flat,
+ACC-90210,MTR-002,"456 Warehouse Rd, Houston TX 77002",2025-02-01,2025-02-28,19100,95,2474.00,Commercial-Flat,
+ACC-90210,MTR-002,"456 Warehouse Rd, Houston TX 77002",2025-03-01,2025-03-31,55200,210,7143.60,Commercial-Flat,Meter replacement — verify reading
+ACC-78543,MTR-003,"789 Office Park Dr, Austin TX 78701",2025-01-01,2025-01-31,12400,58,1612.00,Small-Commercial,
+ACC-78543,MTR-003,"789 Office Park Dr, Austin TX 78701",2025-02-01,2025-02-28,11850,54,1540.50,Small-Commercial,
+ACC-78543,MTR-003,"789 Office Park Dr, Austin TX 78701",2025-03-01,2025-03-31,13100,62,1703.00,Small-Commercial,
+ACC-78543,MTR-004,"321 Data Center Way, Austin TX 78702",2025-01-01,2025-01-31,89200,420,11596.00,Large-Power,Server room
+ACC-78543,MTR-004,"321 Data Center Way, Austin TX 78702",2025-02-01,2025-02-28,91500,435,11895.00,Large-Power,Server room
+ACC-78543,MTR-004,"321 Data Center Way, Austin TX 78702",2025-03-01,2025-03-31,87300,410,11349.00,Large-Power,Server room
