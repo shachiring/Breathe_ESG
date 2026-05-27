@@ -1,38 +1,30 @@
-# Breathe ESG — Emissions Data Ingestion & Review Platform
+# 🌿 Breathe ESG — Enterprise Carbon Accounting Platform
 
-A full-stack prototype (Django REST + React) that ingests emissions and activity data from three enterprise sources, normalises it into a unified schema, and surfaces a review dashboard where analysts can inspect, flag, approve, and reject records before they're locked for audit.
+**🚀 Live Demo:** [https://breatheesg1.netlify.app/](https://breatheesg1.netlify.app/)
 
-## Quick Start
+*(Note: The backend is hosted on a free Render tier, which sleeps after 15 minutes of inactivity. Please allow 30-50 seconds for the initial data to load when first opening the link!)*
 
-### Prerequisites
-- Python 3.11+
-- Node.js 18+
-- pip, npm
+---
 
-### Backend (Django)
-```bash
-cd backend
-pip install django djangorestframework django-cors-headers
-python manage.py migrate
-python manage.py seed_demo      # Load sample data
-python manage.py runserver
-```
-API is available at `http://localhost:8000/api/`
+## 📖 Overview
+Breathe ESG is a full-stack web application designed to solve one of the most tedious challenges in carbon accounting: **data ingestion and normalisation**. 
 
-### Frontend (React + Vite)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Dashboard is available at `http://localhost:5173/`
+Enterprise companies track their emissions (Scope 1, 2, and 3) across disparate systems like SAP (procurement), utility portals (electricity), and Navan/Concur (corporate travel). This application ingests these different raw formats (CSV, JSON), normalises them into a single unified schema, and surfaces a Review Dashboard where sustainability analysts can inspect, flag, and approve records before they are locked for audit.
 
-## Architecture
+## 🛠️ Tech Stack & Architecture
 
-```
+This project was built using a modern, decoupled architecture:
+
+* **Frontend:** React.js, Vite, Vanilla CSS (Custom Design System)
+* **Backend:** Python, Django, Django REST Framework
+* **Database:** PostgreSQL (Production) / SQLite (Local)
+* **Deployment:** Netlify (Frontend), Render (Backend API & Database)
+* **Infrastructure:** Gunicorn, WhiteNoise, dj-database-url
+
+```text
 ┌─────────────────┐     ┌──────────────┐     ┌───────────────┐
-│  React Frontend │────▶│  Django REST  │────▶│   SQLite /    │
-│   (Vite)        │◀────│  Framework   │◀────│  PostgreSQL   │
+│  React Frontend │────▶│  Django REST  │────▶│  PostgreSQL   │
+│    (Netlify)    │◀────│   (Render)   │◀────│   (Render)    │
 └─────────────────┘     └──────────────┘     └───────────────┘
                               │
                     ┌─────────┼─────────┐
@@ -42,44 +34,51 @@ Dashboard is available at `http://localhost:5173/`
                           (CSV)      (JSON)
 ```
 
-## Data Sources
+## ✨ Key Features & Technical Achievements
 
-| Source | Format | Scope | Ingestion |
-|--------|--------|-------|-----------|
-| SAP (Fuel & Procurement) | CSV flat file (semicolon/comma) | Scope 1 (fuels), Scope 3 (goods) | File upload |
-| Utility (Electricity) | Portal CSV export | Scope 2 | File upload |
-| Corporate Travel (Navan) | JSON (API response shape) | Scope 3 | File upload |
+1. **Multi-Tenant Architecture:** The database is designed for SaaS scale. Every piece of data is linked to a `Tenant`, ensuring strict data isolation between different corporate clients.
+2. **Robust File Parsing Engine:** 
+   - Handles SAP flat-file CSV exports (supports both English and German headers, comma or semicolon delimiters).
+   - Handles standard Utility Portal meter readings.
+   - Parses complex Corporate Travel JSON responses from APIs like Navan/Concur.
+3. **Automated Classification:** Automatically maps raw activities to specific Scopes (e.g., Electricity -> Scope 2, Flights -> Scope 3, Diesel -> Scope 1).
+4. **Data Quality Flags:** The ingestion engine automatically flags anomalies (e.g., massive spikes in electricity usage, unknown units, missing dates) for human review.
+5. **Data Provenance (Audit Trail):** To ensure auditability, the original verbatim raw payload of every row is stored permanently alongside the normalised data.
+6. **Bulk Review Workflow:** A React dashboard built for analysts, allowing them to filter by source, scope, and status, and bulk-approve or reject records efficiently.
 
-## Key Features
+## 🧪 Testing the Live App
 
-- **Multi-tenant data model** with tenant isolation
-- **Automatic scope classification** (Scope 1/2/3) based on source and activity type
-- **Smart data quality flags** — spike detection, missing values, unknown units
-- **Original payload preservation** — every normalised row stores the raw source data for audit
-- **Bulk approve/reject workflow** — analysts can review and action records en masse
-- **Filter by source, scope, and status** — focused review of specific data slices
+If you are viewing the live demo and want to test the data ingestion pipeline, you can use the sample files provided in this repository!
 
-## Documentation
+1. Download one of the sample files located in the [`backend/sample_data/`](https://github.com/shachiring/Breathe_ESG/tree/main/backend/sample_data) directory.
+2. Go to the **Ingest Data** tab on the live website.
+3. Upload the corresponding file.
+4. Return to the **Review Dashboard** to see the data successfully parsed, classified, and awaiting your review.
 
-- [`MODEL.md`](MODEL.md) — Data model design and rationale
-- [`DECISIONS.md`](DECISIONS.md) — Ambiguity resolution log
-- [`TRADEOFFS.md`](TRADEOFFS.md) — What we deliberately didn't build
-- [`SOURCES.md`](SOURCES.md) — Research on each data source
+## 💻 Local Development Setup
 
-## API Endpoints
+If you wish to run the project locally on your machine:
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/stats/` | Dashboard summary (counts, scope totals) |
-| GET | `/api/records/` | List emission records (filterable) |
-| POST | `/api/records/bulk_review/` | Bulk approve/reject |
-| POST | `/api/ingest/?source_type=SAP&tenant_id=1` | Upload and ingest data |
-| GET | `/api/tenants/` | List tenants |
-| GET | `/api/imports/` | List import history |
+### Prerequisites
+- Python 3.11+
+- Node.js 18+
 
-## Sample Data
+### Backend (Django)
+```bash
+cd backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+*API will run at `http://localhost:8000/api/`*
 
-Located in `backend/sample_data/`:
-- `sap_export.csv` — 15 rows of SAP procurement/fuel data with German headers
-- `utility_export.csv` — 12 rows of electricity meter readings with a usage spike
-- `travel_bookings.json` — 10 Navan-style travel bookings (flights, hotels, ground, rail)
+### Frontend (React + Vite)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+*Dashboard will run at `http://localhost:5173/`*
+
+---
+*Developed as a technical showcase for enterprise software engineering and full-stack architecture.*
