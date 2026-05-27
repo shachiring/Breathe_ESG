@@ -1,24 +1,29 @@
 # 🌿 Breathe ESG — Enterprise Carbon Accounting Platform
 
-**🚀 Live Demo:** [https://breatheesg1.netlify.app/](https://breatheesg1.netlify.app/)
+### 🚀 **Live Demo:** [https://breatheesg1.netlify.app/](https://breatheesg1.netlify.app/)
 
-*(Note: The backend is hosted on a free Render tier, which sleeps after 15 minutes of inactivity. Please allow 30-50 seconds for the initial data to load when first opening the link!)*
+*(Note: The backend is hosted on a free **Render** tier, which sleeps after 15 minutes of inactivity. Please allow 30-50 seconds for the initial data to load when first opening the link!)*
 
 ---
+
+## ☁️ Deployment Architecture
+This application is fully deployed and live on the internet using modern cloud infrastructure:
+* **Frontend Hosting:** [Netlify](https://www.netlify.com/) (Continuous Deployment from GitHub)
+* **Backend API Hosting:** [Render](https://render.com/) (Gunicorn WSGI Server)
+* **Production Database:** PostgreSQL Managed Database on Render
 
 ## 📖 Overview
 Breathe ESG is a full-stack web application designed to solve one of the most tedious challenges in carbon accounting: **data ingestion and normalisation**. 
 
 Enterprise companies track their emissions (Scope 1, 2, and 3) across disparate systems like SAP (procurement), utility portals (electricity), and Navan/Concur (corporate travel). This application ingests these different raw formats (CSV, JSON), normalises them into a single unified schema, and surfaces a Review Dashboard where sustainability analysts can inspect, flag, and approve records before they are locked for audit.
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Tech Stack
 
 This project was built using a modern, decoupled architecture:
 
 * **Frontend:** React.js, Vite, Vanilla CSS (Custom Design System)
 * **Backend:** Python, Django, Django REST Framework
 * **Database:** PostgreSQL (Production) / SQLite (Local)
-* **Deployment:** Netlify (Frontend), Render (Backend API & Database)
 * **Infrastructure:** Gunicorn, WhiteNoise, dj-database-url
 
 ```text
